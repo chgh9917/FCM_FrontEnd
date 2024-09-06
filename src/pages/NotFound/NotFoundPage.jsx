@@ -1,8 +1,8 @@
 import React from "react";
 import "./NotFoundPage.style.css";
-import Warning from "/public/images/NotFoundSource/Warning.png";
-import BackButton from "/public/images/NotFoundSource/backButton.png";
-import HomeButton from "/public/images/NotFoundSource/HomeButton.png";
+import Warning from "/public/images/NotFoundPageSource/Warning.png";
+import BackButton from "/public/images/NotFoundPageSource/backButton.png";
+import HomeButton from "/public/images/NotFoundPageSource/HomeButton.png";
 
 export default function NotFoundPage() {
   return (
