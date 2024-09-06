@@ -1,9 +1,11 @@
 import "./App.css";
+import "/public/Font/Font.style.css";
 import { Routes, Route } from "react-router-dom";
 import CommunityPage from "./pages/Community/CommunityPage";
 import QuestionAndAnswerPage from "./pages/QuestionAndAnswer/QuestionAndAnswerPage";
 import NotFoundPage from "./pages/NotFound/NotFoundPage";
 import HomePage from "./pages/HomePage/HomePage";
+import LoginPage from "./pages/LoginPage/LoginPage";
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/community" element={<CommunityPage />} />
       <Route path="/question" element={<QuestionAndAnswerPage />} />
+      <Route path="/login" element={<LoginPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
