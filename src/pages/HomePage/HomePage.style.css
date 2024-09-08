@@ -1,0 +1,81 @@
+.homePageContainer {
+  width: 100%;
+}
+
+.bannerContainer {
+  font-family: "Cafe24Ssurround";
+  width: 100%;
+  height: 40vh;
+  background-color: rgb(253, 229, 177);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.bannerLeftContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bannerLeftTextContainer {
+}
+
+.bannerTitleText {
+  font-size: 25px;
+  text-align: center;
+}
+
+.bannerButton {
+  background-color: rgb(255, 103, 64);
+  height: 5vh;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.imageBannerSilder {
+  width: 25%;
+  height: 70%;
+  background-color: rgb(255, 145, 145);
+  border-radius: 10px;
+}
+
+.benefitContentContainer {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.benefitContour {
+  width: 3px;
+  height: 70%;
+  background-color: rgb(245, 245, 247);
+  border: 0 0 1px 1px solid black;
+}
+
+.imageSliderContainer {
+  margin-top: 100px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(149, 149, 255);
+}
+
+.footerContainer {
+  margin-top: 200px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(162, 161, 166);
+}
