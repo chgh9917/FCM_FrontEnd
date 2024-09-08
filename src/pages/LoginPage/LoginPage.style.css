@@ -1,0 +1,54 @@
+.loginContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  font-family: "Cafe24Ssurround";
+  gap: 10px;
+}
+
+.loginTitle {
+  font-size: 30px;
+}
+
+.loginSubTitle {
+  color: gray;
+}
+
+.loginContainer input {
+  outline: none;
+  width: 25%;
+  height: 5%;
+  border: 2px solid gray;
+  border-radius: 10px;
+  font-family: "Cafe24Ssurround";
+}
+
+.loginPageSubmitButton {
+  width: 25%;
+  height: 5%;
+  background-color: rgb(255, 102, 66);
+  border: 2px solid rgb(255, 102, 66);
+  border-radius: 10px;
+  color: white;
+  font-family: "Cafe24Ssurround";
+  font-size: 20px;
+}
+
+.loginPageSignupAskContainer {
+  width: 25%;
+  height: 5%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.loginPageSignupQuestion {
+  color: gray;
+}
+
+.loginPageGoSignupPage {
+  color: rgb(255, 102, 66);
+}
