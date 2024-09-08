@@ -25,15 +25,25 @@ export default function Banner() {
   return (
     <div className="navbarContainer">
       <div className="navbarNavigateContainer">
-        <img className="navbarLogo" src={Logo} onClick={homePageNavigate} />
-        <div className="navbarCommunityAnchor" onClick={communityNavigate}>
+        <img
+          className="navbarNavigate navbarLogo"
+          src={Logo}
+          onClick={homePageNavigate}
+        />
+        <div
+          className="navbarNavigate navbarCommunityAnchor"
+          onClick={communityNavigate}
+        >
           커뮤니티
         </div>
-        <div className="navbarQuestionAnchor" onClick={questionAnswerNavigate}>
+        <div
+          className="navbarNavigate navbarQuestionAnchor"
+          onClick={questionAnswerNavigate}
+        >
           Q&A
         </div>
       </div>
-      <div className="navbarLoginButton" onClick={loginNavigate}>
+      <div className="navbarNavigate navbarLoginButton" onClick={loginNavigate}>
         <div className="navbarLoginText">로그인</div>
       </div>
     </div>
