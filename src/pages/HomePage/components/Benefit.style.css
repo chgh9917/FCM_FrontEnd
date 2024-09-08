@@ -1,0 +1,21 @@
+.benefitContainer {
+  width: 180px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.benefitIcon {
+  width: 50%;
+  height: 50%;
+  background-color: rgb(245, 245, 247);
+  border-radius: 50%;
+}
+
+.benefitContent {
+  font-family: "Cafe24Ssurround";
+  font-size: 18px;
+}
