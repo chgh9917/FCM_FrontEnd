@@ -52,3 +52,7 @@
 .loginPageGoSignupPage {
   color: rgb(255, 102, 66);
 }
+
+.loginPageButton {
+  cursor: pointer;
+}

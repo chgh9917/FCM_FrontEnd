@@ -25,10 +25,13 @@ export default function LoginPage() {
         placeholder="비밀번호를 입력해주세요"
         required
       />
-      <button className="loginPageSubmitButton">로그인</button>
+      <button className="loginPageButton loginPageSubmitButton">로그인</button>
       <div className="loginPageSignupAskContainer">
         <div className="loginPageSignupQuestion">아직 회원이 아니신가요?</div>
-        <div className="loginPageGoSignupPage" onClick={signupNavigate}>
+        <div
+          className="loginPageButton loginPageGoSignupPage"
+          onClick={signupNavigate}
+        >
           회원가입
         </div>
       </div>
