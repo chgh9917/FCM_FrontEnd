@@ -6,6 +6,7 @@ import QuestionAndAnswerPage from "./pages/QuestionAndAnswer/QuestionAndAnswerPa
 import NotFoundPage from "./pages/NotFound/NotFoundPage";
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import SignupPage from "./pages/SignupPage/SignupPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/community" element={<CommunityPage />} />
       <Route path="/question" element={<QuestionAndAnswerPage />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignupPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
