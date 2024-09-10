@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "/public/images/Favicon/Calorie.png";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.style.css";
 
 export default function Banner() {
   const navigate = useNavigate();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // 세션에서 로그인 상태를 확인
+  useEffect(() => {
+    const userSession = sessionStorage.getItem("user");
+    console.log("User session:", userSession);
+    if (userSession) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   const homePageNavigate = () => {
     navigate("/");
@@ -19,7 +29,13 @@ export default function Banner() {
   };
 
   const loginNavigate = () => {
-    navigate("/login");
+    if (isLoggedIn) {
+      sessionStorage.removeItem("user");
+      setIsLoggedIn(false);
+      alert("로그아웃되었습니다.");
+    } else {
+      navigate("/login");
+    }
   };
 
   return (
@@ -44,7 +60,9 @@ export default function Banner() {
         </div>
       </div>
       <div className="navbarNavigate navbarLoginButton" onClick={loginNavigate}>
-        <div className="navbarLoginText">로그인</div>
+        <div className="navbarLoginText">
+          {isLoggedIn ? "로그아웃" : "로그인"}
+        </div>
       </div>
     </div>
   );
