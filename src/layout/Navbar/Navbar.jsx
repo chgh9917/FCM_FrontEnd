@@ -7,10 +7,8 @@ export default function Banner() {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // 세션에서 로그인 상태를 확인
   useEffect(() => {
     const userSession = sessionStorage.getItem("user");
-    console.log("User session:", userSession);
     if (userSession) {
       setIsLoggedIn(true);
     }

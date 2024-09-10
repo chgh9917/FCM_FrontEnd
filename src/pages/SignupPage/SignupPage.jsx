@@ -2,22 +2,17 @@ import React, { useState } from "react";
 import "./SignupPage.style.css";
 import Navbar from "../../layout/Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
-import axios from 'axios';
+import axios from "axios";
 
 export default function SignupPage() {
-
   const navigate = useNavigate();
-
-  const signupNavigate = () => {
-    navigate("/signup");
-  };
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-  const [height, setHeight] = useState("");
-  const [weight, setWeight] = useState("");
+  const [age, setAge] = useState(0);
+  const [height, setHeight] = useState(0);
+  const [weight, setWeight] = useState(0);
 
   const handleSubmit = async () => {
     const signupData = {
@@ -30,11 +25,15 @@ export default function SignupPage() {
     };
 
     try {
-      const response = await axios.post("http://localhost:8080/join", signupData, {
-        headers: {
-          "Content-Type": "application/json",
+      const response = await axios.post(
+        "http://localhost:8080/join",
+        signupData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-      });
+      );
 
       if (response.status === 200) {
         navigate("/login");

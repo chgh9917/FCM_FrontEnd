@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./LoginPage.style.css";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../../layout/Navbar/Navbar";
-import axios from 'axios';
+import axios from "axios";
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -13,16 +12,20 @@ export default function LoginPage() {
   const handleSubmit = async () => {
     const loginData = {
       email,
-      password
+      password,
     };
 
     try {
-      const response = await axios.post("http://localhost:8080/login", loginData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        withCredentials: true,
-      });
+      const response = await axios.post(
+        "http://localhost:8080/login",
+        loginData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
 
       if (response.status === 200) {
         sessionStorage.setItem("user", response.data);
@@ -35,15 +38,12 @@ export default function LoginPage() {
     }
   };
 
-
-
   const signupNavigate = () => {
     navigate("/signup");
   };
 
   return (
     <div className="loginContainer">
-      <Navbar />
       <div className="loginTitle">로그인</div>
       <div className="loginSubTitle">음식 칼로리 분석 사이트</div>
       <input
@@ -60,7 +60,12 @@ export default function LoginPage() {
         required
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button className="loginPageButton loginPageSubmitButton" onClick={handleSubmit}>로그인</button>
+      <button
+        className="loginPageButton loginPageSubmitButton"
+        onClick={handleSubmit}
+      >
+        로그인
+      </button>
       <div className="loginPageSignupAskContainer">
         <div className="loginPageSignupQuestion">아직 회원이 아니신가요?</div>
         <div
