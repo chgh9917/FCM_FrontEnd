@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Logo from "/public/images/Favicon/Calorie.png";
+import Logo from "/public/images/NavbarImage/LogoNoneText.png";
 import { useNavigate } from "react-router-dom";
 import "./Navbar.style.css";
 
@@ -38,27 +38,18 @@ export default function Banner() {
 
   return (
     <div className="navbarContainer">
-      <div className="navbarNavigateContainer">
-        <img
-          className="navbarNavigate navbarLogo"
-          src={Logo}
-          onClick={homePageNavigate}
-        />
-        <div
-          className="navbarNavigate navbarCommunityAnchor"
-          onClick={communityNavigate}
-        >
+      <div className="navbarHomeNavigateContainer" onClick={homePageNavigate}>
+        <img className="navbarNavigate navbarLogo" src={Logo} />
+        <div className="navbarNavigate navbarHomeAnchor">FCM</div>
+      </div>
+      <div className="navbarNavigateSet">
+        <div className="navbarNavigate" onClick={communityNavigate}>
           커뮤니티
         </div>
-        <div
-          className="navbarNavigate navbarQuestionAnchor"
-          onClick={questionAnswerNavigate}
-        >
+        <div className="navbarNavigate" onClick={questionAnswerNavigate}>
           Q&A
         </div>
-      </div>
-      <div className="navbarNavigate navbarLoginButton" onClick={loginNavigate}>
-        <div className="navbarLoginText">
+        <div className="navbarNavigate" onClick={loginNavigate}>
           {isLoggedIn ? "로그아웃" : "로그인"}
         </div>
       </div>
