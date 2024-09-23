@@ -1,6 +1,6 @@
 .benefitContainer {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,14 +8,17 @@
   gap: 20px;
 }
 
-.benefitIcon {
-  width: 50%;
-  height: 50%;
-  background-color: rgb(245, 245, 247);
-  border-radius: 50%;
+.benefitIconImage {
+  width: 75px;
+  height: 75px;
 }
 
 .benefitContent {
-  font-family: "Cafe24Ssurround";
-  font-size: 18px;
+  font-family: "NanumSqueareNeoDEB";
+  font-size: 20px;
+}
+
+.benefitSubContent {
+  font-family: "NanumSqueareNeoALT";
+  font-size: 10px;
 }

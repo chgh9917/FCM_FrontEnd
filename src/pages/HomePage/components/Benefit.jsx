@@ -1,13 +1,12 @@
 import React from "react";
 import "./Benefit.style.css";
 
-export default function Benefit({ icon, content }) {
+export default function Benefit({ icon, contentTitle, subContent }) {
   return (
     <div className="benefitContainer">
-      <div className="benefitIcon">
-        <img className="benefitIconImage" />
-      </div>
-      <div className="benefitContent">{content}</div>
+      <img className="benefitIconImage" src={icon} />
+      <div className="benefitContent">{contentTitle}</div>
+      <div className="benefitSubContent">{subContent}</div>
     </div>
   );
 }
