@@ -1,5 +1,5 @@
 .navbarContainer {
-  font-family: "Cafe24Ssurround";
+  font-family: "NanumSqueareNeoDEB";
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -26,5 +26,5 @@
 .navbarNavigateSet {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
