@@ -5,9 +5,8 @@
   justify-content: center;
   align-items: center;
   background-color: black;
-  margin-top: 50px;
   height: 300px;
-  font-family: "Cafe24Ssurround";
+  font-family: "NanumSqueareNeoCBD";
   color: white;
 }
 
@@ -26,9 +25,14 @@
   height: 50px;
   justify-content: center;
   flex-direction: column;
+  gap: 15px;
 }
 
 .footerInfoTextContainer div {
   display: flex;
   justify-content: center;
+}
+
+.footerInfoCopyright {
+  font-size: 12px;
 }
