@@ -28,7 +28,7 @@
   flex-direction: column;
 }
 
-.footerInfoTextContainer * {
+.footerInfoTextContainer div {
   display: flex;
   justify-content: center;
 }
