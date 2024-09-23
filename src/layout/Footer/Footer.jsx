@@ -5,18 +5,17 @@ import Logo from "/public/images/Favicon/Calorie.png";
 export default function Footer() {
   return (
     <div className="footerContentContainer">
-      <div className="footerInfoContainer">
+      <div className="footerLogoContainer">
         <img className="footerInfoLogo" src={Logo} />
-        <div className="footerInfoTextContainer">
-          <div className="footerInfoPhoneNumber">전화번호 : 010-1234-5678</div>
-          <div className="footerInfoCopyright">
-            Copyright : 기업 연계 프로젝트
-          </div>
-        </div>
+        <div className="footerInfoTitle">FCM</div>
       </div>
-      <div className="footerButtonContainer">
-        <div className="footerGoQustionButton">문의하기</div>
-        <div className="footerFrequencyQustion">자주 묻는 질문</div>
+      <div className="footerInfoTextContainer">
+        <div className="footerInfoCopyright">
+          © 2024. 기업연계프로젝트 All rights reserved.
+        </div>
+        <div className="footerInfoCopyright">
+          전북특별자치도 익산시 신동 원광대학교 | 010-1234-5678
+        </div>
       </div>
     </div>
   );
