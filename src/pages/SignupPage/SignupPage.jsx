@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./SignupPage.style.css";
-import Navbar from "../../layout/Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Footer from "../../layout/Footer/Footer";
 
 export default function SignupPage() {
   const navigate = useNavigate();
@@ -47,10 +47,8 @@ export default function SignupPage() {
 
   return (
     <div className="signupPageContainer">
-      <Navbar />
       <div className="signupPageInputBoxContainer">
         <div className="signupPageTitle">회원가입</div>
-        <div className="signupPageTitleInfoContour" />
         <div className="signupPageInfoFormContainer">
           <div className="signupPageInfoEmailFormContainer">
             <div className="inputTitle signupPageInfoEmailFormTitle">
@@ -128,10 +126,8 @@ export default function SignupPage() {
               />
             </div>
           </div>
-          <div className="signupPageSubmitButtonContainer">
-            <div className="signupPageSubmitButton" onClick={handleSubmit}>
-              회원가입
-            </div>
+          <div className="signupPageSubmitButton" onClick={handleSubmit}>
+            회원가입
           </div>
         </div>
       </div>
