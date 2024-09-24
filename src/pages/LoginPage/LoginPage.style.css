@@ -3,56 +3,83 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.loginTitleSet {
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: beige;
-  font-family: "Cafe24Ssurround";
-  gap: 10px;
+  margin-top: 8%;
+}
+
+.loginTitleIcon {
+  width: 100px;
+  height: 100px;
 }
 
 .loginTitle {
   font-size: 30px;
-}
-
-.loginSubTitle {
-  color: gray;
+  color: #163e04;
+  font-family: "NanumSqueareNeoEHV";
 }
 
 .loginContainer input {
   outline: none;
-  width: 25%;
+  width: 30%;
   height: 5%;
-  border: 2px solid gray;
-  border-radius: 10px;
-  font-family: "Cafe24Ssurround";
+  border: 2px solid #d7dbe0;
+  font-family: "NanumSqueareNeoCBD";
+}
+
+.loginContainer input:focus {
+  border: 2px solid black;
 }
 
 .loginPageSubmitButton {
-  width: 25%;
-  height: 5%;
-  background-color: rgb(255, 102, 66);
-  border: 2px solid rgb(255, 102, 66);
-  border-radius: 10px;
+  width: 31%;
+  height: 6%;
+  background-color: #80b413;
+  border: 5px solid #80b413;
+  border-radius: 5px;
   color: white;
-  font-family: "Cafe24Ssurround";
   font-size: 20px;
+  font-family: "NanumSqueareNeoCBD";
 }
 
 .loginPageSignupAskContainer {
-  width: 25%;
+  width: 30%;
   height: 5%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
 }
 
 .loginPageSignupQuestion {
-  color: gray;
+  color: rgb(183, 183, 183);
+  font-family: "NanumSqueareNeoCBD";
+}
+
+.loginPageSignupQuestionLine {
+  width: 2px;
+  height: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(183, 183, 183);
 }
 
 .loginPageGoSignupPage {
-  color: rgb(255, 102, 66);
+  color: #1a202c;
 }
 
 .loginPageButton {
   cursor: pointer;
+}
+
+.footerContainer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }

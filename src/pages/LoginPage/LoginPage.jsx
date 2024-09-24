@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./LoginPage.style.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Footer from "../../layout/Footer/Footer";
+import Logo from "/public/images/LoginPageImage/LogoNoneText.png";
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -44,8 +46,10 @@ export default function LoginPage() {
 
   return (
     <div className="loginContainer">
-      <div className="loginTitle">로그인</div>
-      <div className="loginSubTitle">음식 칼로리 분석 사이트</div>
+      <div className="loginTitleSet">
+        <img className="loginTitleIcon" src={Logo} />
+        <div className="loginTitle">FCM</div>
+      </div>
       <input
         type="email"
         className="email"
@@ -68,12 +72,16 @@ export default function LoginPage() {
       </button>
       <div className="loginPageSignupAskContainer">
         <div className="loginPageSignupQuestion">아직 회원이 아니신가요?</div>
+        <div className="loginPageSignupQuestionLine"></div>
         <div
           className="loginPageButton loginPageGoSignupPage"
           onClick={signupNavigate}
         >
           회원가입
         </div>
+      </div>
+      <div className="footerContainer">
+        <Footer />
       </div>
     </div>
   );
