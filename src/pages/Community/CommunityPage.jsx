@@ -1,20 +1,25 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../../layout/Navbar/Navbar";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import "./CommunityPage.style.css";
 import axios from "axios";
 
 export default function CommunityPage() {
-  // State for posts fetched from the backend
-  const [posts, setPosts] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 6;
+    const navigate = useNavigate();
+    const [posts, setPosts] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const postsPerPage = 6;
+
+    const writerPageNavigate = () => {
+        navigate("/write?boardGrade=community");
+    };
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
         const response = await axios.get("http://localhost:8080/api/posts/community");
         setPosts(response.data);
+        console.log(response.data)
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
@@ -44,8 +49,8 @@ export default function CommunityPage() {
                 <Link className="postLink" to={`/community/${post.id}`}>
                   <span className="postTitle">{post.title}</span>
                   <div className="postInfoContainer">
-                    <span className="postAuthor">{post.author}</span>
-                    <span className="postDate">{post.date}</span>
+                    <span className="postAuthor">{post.writer}</span>
+                    <span className="postDate">{post.createAt}</span>
                   </div>
                 </Link>
               </li>
@@ -95,7 +100,7 @@ export default function CommunityPage() {
         </div>
 
         <div className="writeButtonContainer">
-          <button className="writeButton">글쓰기</button>
+          <button className="writeButton" onClick={writerPageNavigate}>글쓰기</button>
         </div>
       </div>
   );

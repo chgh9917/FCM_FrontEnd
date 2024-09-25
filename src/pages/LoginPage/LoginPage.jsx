@@ -30,7 +30,8 @@ export default function LoginPage() {
       );
 
       if (response.status === 200) {
-        sessionStorage.setItem("user", response.data);
+          const user = response.data;
+          sessionStorage.setItem("user", JSON.stringify(user));
         navigate("/");
       } else {
         console.error("로그인 실패");

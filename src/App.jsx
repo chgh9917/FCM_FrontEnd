@@ -7,6 +7,7 @@ import NotFoundPage from "./pages/NotFound/NotFoundPage";
 import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignupPage from "./pages/SignupPage/SignupPage";
+import WriterPage from "./pages/PostWrite/WriterPage";
 import CommunityPostDetail from "./components/CommunityPostDetail/CommunityPostDetail";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route path="/question" element={<QuestionAndAnswerPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/signup" element={<SignupPage />} />
+        <Route path="/write" element={<WriterPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
