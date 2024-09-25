@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../layout/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import "./CommunityPage.style.css";
+import axios from "axios";
 
+// test Code
 const posts = [
   { id: 1, title: "테스트1", author: "차지태", date: "2024.09.24" },
   { id: 2, title: "테스트2", author: "이충현", date: "2024.09.25" },
@@ -19,6 +21,21 @@ const posts = [
 ];
 
 export default function CommunityPage() {
+  // 백엔드 page 요청 useEffect
+  //   const [posts, setPosts] = useState([]);
+  //   useEffect(() => {
+  //     const fetchPosts = async () => {
+  //       try {
+  //         // 백엔드 주소 넣어야함
+  //         const response = await axios.get();
+  //         setPosts(response.data);
+  //       } catch (error) {
+  //         console.log("Error Code", error);
+  //       }
+  //     };
+  //     fetchPosts();
+  //   }, []);
+
   const [currentPage, setCurrentPage] = useState(1);
   const postsPerPage = 6;
 
