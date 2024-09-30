@@ -2,13 +2,15 @@ import React, { useState, useEffect } from "react";
 import Navbar from "../../layout/Navbar/Navbar";
 import {Link, useNavigate} from "react-router-dom";
 import "./CommunityPage.style.css";
+import { format } from 'date-fns';
 import axios from "axios";
 
 export default function CommunityPage() {
     const navigate = useNavigate();
     const [posts, setPosts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const postsPerPage = 6;
+    const [boardGrades, setBoardGrades] = useState("community");
+    const postsPerPage = 10;
 
     const writerPageNavigate = () => {
         navigate("/write?boardGrade=community");
@@ -17,9 +19,8 @@ export default function CommunityPage() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/posts/community");
+        const response = await axios.post("http://localhost:8080/api/posts?boardGrade=community");
         setPosts(response.data);
-        console.log(response.data)
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
@@ -37,6 +38,10 @@ export default function CommunityPage() {
   };
 
   const totalPages = Math.ceil(posts.length / postsPerPage);
+  function formatLocalDateTime(localDateTime) {
+      const date = new Date(localDateTime);
+      return format(date, 'yyyy-MM-dd HH:mm:ss'); // 원하는 형식으로 지정
+  }
 
   return (
       <div className="communityContainer">
@@ -50,7 +55,7 @@ export default function CommunityPage() {
                   <span className="postTitle">{post.title}</span>
                   <div className="postInfoContainer">
                     <span className="postAuthor">{post.writer}</span>
-                    <span className="postDate">{post.createAt}</span>
+                    <span className="postDate">{formatLocalDateTime(post.createAt)}</span>
                   </div>
                 </Link>
               </li>

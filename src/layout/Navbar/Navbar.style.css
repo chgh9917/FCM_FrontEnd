@@ -28,3 +28,28 @@
   align-items: center;
   gap: 25px;
 }
+
+.navbarDropdown {
+  position: relative;
+}
+
+.navbarDropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.navbarDropdownItem {
+  padding: 10px 20px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.navbarDropdownItem:hover {
+  background-color: #f1f1f1;
+}
