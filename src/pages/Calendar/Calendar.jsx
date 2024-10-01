@@ -75,6 +75,9 @@ const CustomCalendar = () => {
             // 제목, 설명 및 날짜 추가
             formData.append('title', newEventTitle);
             formData.append('description', newEventDescription);
+            const userString = sessionStorage.getItem('user');
+            const user = JSON.parse(userString);
+            formData.append('email', user.email);
 
             // 서버에 POST 요청
             fetch('http://localhost:8080/calendar/upload', {
