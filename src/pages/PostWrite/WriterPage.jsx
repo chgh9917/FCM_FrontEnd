@@ -19,7 +19,7 @@ export default function LoginPage() {
         const userString = sessionStorage.getItem('user');
         const user = JSON.parse(userString);
 
-        const writer = user.name;
+        const writer = user.id;
 
         const queryParams = new URLSearchParams(location.search);
         const boardGrade = queryParams.get('boardGrade');
